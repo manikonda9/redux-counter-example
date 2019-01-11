@@ -1,0 +1,22 @@
+{
+  "name": "react-example",
+  "version": "0.0.132",
+  "description": null,
+  "keywords": [],
+  "main": "index.js",
+  "dependencies": {
+    "react": "16.7.0",
+    "react-dom": "16.7.0",
+    "react-redux": "6.0.0",
+    "redux": "4.0.1"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
