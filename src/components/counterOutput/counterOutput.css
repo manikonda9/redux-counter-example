@@ -1,8 +1,8 @@
 .output {
-  width: 91%;
   border: 1px solid blue;
   text-align: center;
   padding: 25px;
+  border-radius: 5px;
   background-color: orange;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }

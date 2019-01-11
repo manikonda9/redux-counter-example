@@ -2,10 +2,8 @@
   background-color: orange;
   border: 1px solid green;
   border-radius: 10px;
-  width: 16%;
   padding: 25px;
-  display: inline-block;
-  margin: 10px 1px;
+  margin-top: 10px;
   text-align: center;
   font-family: "Sofia", Tahoma, Geneva, Verdana, sans-serif !important;
 }
