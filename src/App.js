@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Counter from "./containers/counter/counter";
+import './App.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>{this.props.title}</h1>
+        <h1 className="main">{this.props.title}</h1>
         <Counter counter={this.state.counter} />
       </div>
     );

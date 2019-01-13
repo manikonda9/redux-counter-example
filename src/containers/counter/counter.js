@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import './counter.css';
 import { connect } from "react-redux";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { INC, DEC, ADD, SUB, func } from "../../actions/index";
@@ -16,7 +17,7 @@ class Counter extends React.Component {
   render() {
     return (
       <div>
-        <h1>{this.props.title}</h1>
+        <h1 className="main">{this.props.title}</h1>
         <Output counter={this.props.ctr} />
         <div className="container">
           <div className="row">
