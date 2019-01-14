@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import './counter.css';
+import "./counter.css";
 import { connect } from "react-redux";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { INC, DEC, ADD, SUB, func } from "../../actions/index";
@@ -21,8 +21,8 @@ class Counter extends React.Component {
         <Output counter={this.props.ctr} />
         <div className="container">
           <div className="row">
-            <View label="Increment 1" click={this.props.incFunc} />
-            <View label="Decrement 1" click={this.props.decFunc} />
+            <View label="Increment" click={this.props.incFunc} />
+            <View label="Decrement" click={this.props.decFunc} />
             <View label="Add 15" click={this.props.addFunc} />
             <View label="Subtract 20" click={this.props.subFunc} />
           </div>
