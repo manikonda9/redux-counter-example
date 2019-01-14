@@ -17,3 +17,8 @@
   border: 1px solid brown;
   border-radius: 5px;
 }
+
+.dashboard .link, .dashboard .link:hover{
+  color: white !important;
+  font-weight: bold;
+}

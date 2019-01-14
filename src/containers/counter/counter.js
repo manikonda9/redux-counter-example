@@ -23,7 +23,7 @@ class Counter extends React.Component {
             React Home Page
           </Link>
         </h1>
-        <h1 className="main">Redux Counter Example</h1>
+        <h3 className="main">Redux Counter Example</h3>
         <Output counter={this.props.ctr} />
         <div className="container">
           <div className="row">

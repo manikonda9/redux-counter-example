@@ -21,7 +21,7 @@ class List extends React.Component {
             React Home Page
           </Link>
         </h1>
-        <h1 className="list">Redux List Example</h1>
+        <h3 className="list">Redux List Example</h3>
         <div className="row container">
           <AddList add={this.props.add} />
           <ListView
