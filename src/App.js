@@ -8,7 +8,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      counter: 0
+      counter: 0,
+      list: []
     };
   }
   render() {
@@ -16,7 +17,7 @@ class App extends React.Component {
       <div>
         <h1 className="main">{this.props.title}</h1>
         <Counter counter={this.state.counter} />
-        <List />
+        <List list={this.state.list} />
       </div>
     );
   }

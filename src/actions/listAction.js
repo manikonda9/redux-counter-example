@@ -1,9 +1,15 @@
-export const addItem = text => ({
-  type: "ADD_LIST",
-  text
-});
+import React from "react";
 
-export const deleteItem = id => ({
-  type: "DELETE",
-  id
-});
+export const addItem = text => {
+  return {
+    type: "ADD_LIST",
+    text: text
+  };
+};
+
+export const deleteItem = id => {
+  return {
+    type: "DELETE",
+    id: id
+  };
+};
