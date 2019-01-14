@@ -18,7 +18,10 @@ class List extends React.Component {
         <h1 className="list">Redux List Example</h1>
         <div className="row container">
           <AddList add={this.props.add} />
-          <ListView list={this.props.listItems} delete={this.props.delete} />
+          <ListView
+            list={this.props.listItems.list}
+            delete={this.props.delete}
+          />
         </div>
       </div>
     );
@@ -27,7 +30,7 @@ class List extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    listItems: state.listReducer.list
+    listItems: state.listReducer
   };
 };
 

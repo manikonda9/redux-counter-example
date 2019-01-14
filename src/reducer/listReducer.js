@@ -14,6 +14,7 @@ const listReducer = (state = initialList, action) => {
       list.splice(action.id, 1);
       break;
     default:
+      list = list;
       break;
   }
   return {
