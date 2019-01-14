@@ -7,3 +7,13 @@
 .link:hover {
   text-decoration: none;
 }
+.dashboard {
+  width: 46%;
+  display: inline-block;
+  margin: 10px;
+  background-color: violet;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid brown;
+  border-radius: 5px;
+}
