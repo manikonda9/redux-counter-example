@@ -13,6 +13,14 @@ class Home extends React.Component {
         {
           name: "List Example",
           path: "/list"
+        },
+        {
+          name: "Table Search Example",
+          path: "/table"
+        },
+        {
+          name: "High Chart Example",
+          path: "/chart"
         }
       ]
     };
