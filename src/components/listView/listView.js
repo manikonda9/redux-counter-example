@@ -1,5 +1,6 @@
 import React from "react";
 import "./listView.css";
+import "font-awesome/css/font-awesome.min.css";
 
 const listView = props => {
   return (
@@ -10,10 +11,10 @@ const listView = props => {
           <li key={index}>
             {list}
             <button
-              className="btn btn-danger"
+              className="btn btn-default"
               onClick={() => props.delete(index)}
             >
-              Delete
+              <i className="fa fa-trash-o" />
             </button>
           </li>
         ))}
