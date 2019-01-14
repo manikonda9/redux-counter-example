@@ -1,6 +1,9 @@
-.main{
-    text-align: center;
-    color:blue;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-decoration-line: line-through;
+.main {
+  text-align: center;
+  color: blue;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-decoration-line: line-through;
+}
+.link:hover {
+  text-decoration: none;
 }
