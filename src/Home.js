@@ -21,6 +21,10 @@ class Home extends React.Component {
         {
           name: "High Chart Example",
           path: "/chart"
+        },
+        {
+          name: "Todo Firebase Example",
+          path: "/todo"
         }
       ]
     };

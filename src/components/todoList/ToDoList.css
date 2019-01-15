@@ -1,0 +1,66 @@
+.to-do-list-container {
+  margin-top: 25px;
+}
+
+.to-do-list-item {
+  margin-top: 10px;
+  color: white;
+  transition: background-color 1s;
+}
+
+.fixed-action-btn {
+  margin-top: 20px;
+}
+
+.to-do-list-item h4 {
+  padding-left: 25px;
+  padding-bottom: 5px;
+}
+
+.delete {
+  color: white;
+}
+
+.file {
+  color: white;
+  font-size: 23px !important;
+  font-weight: bold;
+}
+
+.to-do-list-item {
+  background-color: #26a69a !important;
+  border-radius: 5px;
+}
+
+.complete-todo-item {
+  float: right;
+  right: 20px;
+}
+
+.add {
+  color: white;
+  font-weight: bold;
+}
+
+.round {
+  border-radius: 50%;
+}
+
+#todo-add-form {
+  animation-duration: 1s;
+  animation-name: slidein;
+}
+
+#nothing-was-found {
+  margin-top: 150px;
+}
+
+@keyframes slidein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    margin-left: 1;
+  }
+}
