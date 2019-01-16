@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 import { dataRef } from "../../config/firebase";
+import { getData } from "../../actions/tableAction";
 import "./table.css";
 
 class Table extends React.Component {
@@ -14,7 +16,7 @@ class Table extends React.Component {
   }
 
   componentWillMount = () => {
-    let items = [];
+    /*let items = [];
     const ordersRef = dataRef.orderByKey();
     ordersRef.once("value", snapshot => {
       snapshot.forEach(child => {
@@ -32,11 +34,13 @@ class Table extends React.Component {
         items: items,
         data: items
       });
-    });
+    });*/
+    this.props.get();
   };
 
   searchTableData = () => {
     let value = this.state.searchInput;
+
     let data = this.state.data;
     let items = [];
     data.forEach(function(ele) {
@@ -59,7 +63,9 @@ class Table extends React.Component {
   };
 
   render() {
-    const items = this.state.items;
+    const { data } = this.props.list;
+
+    const items = data;
     return (
       <div className="container">
         <h1 className="main">
@@ -103,4 +109,19 @@ class Table extends React.Component {
   }
 }
 
-export default Table;
+const mapStateToProps = state => {
+  return {
+    list: state.tableReducer
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    get: () => dispatch(getData())
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Table);
