@@ -1,0 +1,27 @@
+/* not showing first two column*/
+/*@media only screen and (max-width: 560px) {
+  th:not(:nth-child(n + 3)),
+  td:not(:nth-child(n + 3)) {
+    display: none;
+  }
+}*/
+
+/* only showing first two columns in mobile screens*/
+/*@media only screen and (max-width: 560px) {
+  th:nth-child(n + 3),
+  td:nth-child(n + 3) {
+    display: none;
+  }
+}*/
+
+/* only showing particular columns*/
+@media only screen and (max-width: 560px) {
+  th:nth-child(2),
+  td:nth-child(2),
+  th:nth-child(3),
+  td:nth-child(3),
+  th:nth-child(4),
+  td:nth-child(4) {
+    display: none;
+  }
+}
