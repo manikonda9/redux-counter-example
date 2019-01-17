@@ -5,6 +5,7 @@ import List from "./containers/list/list";
 import Table from "./containers/table/table";
 import Chart from "./containers/chart/chart";
 import ToDo from "./components/todoList/ToDoList";
+import Form from "./containers/forms/userForm";
 import Home from "./Home";
 
 class RouterComp extends React.Component {
@@ -17,6 +18,7 @@ class RouterComp extends React.Component {
         <Route path="/table" component={Table} />
         <Route path="/chart" component={Chart} />
         <Route path="/todo" component={ToDo} />
+        <Route path="/form" component={Form} />
       </Switch>
     );
   }

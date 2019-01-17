@@ -7,24 +7,28 @@ class Home extends React.Component {
     this.state = {
       data: [
         {
-          name: "Counter Example",
+          name: "Redux Counter",
           path: "/counter"
         },
         {
-          name: "List Example",
+          name: "Redux List",
           path: "/list"
         },
         {
-          name: "Table Search Example",
+          name: "Table Search",
           path: "/table"
         },
         {
-          name: "High Chart Example",
+          name: "High Charts",
           path: "/chart"
         },
         {
-          name: "Todo Firebase Example",
+          name: "Todo Firebase",
           path: "/todo"
+        },
+        {
+          name: "Upload Form Data",
+          path: "/form"
         }
       ]
     };
