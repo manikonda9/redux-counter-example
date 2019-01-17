@@ -10,7 +10,7 @@ class Chart extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      response: [],
+      listData: [],
       lineData: [],
       columnData: []
     };
@@ -20,16 +20,17 @@ class Chart extends React.Component {
     axios
       .get("https://my-practice-project-f6467.firebaseio.com/sales.json")
       .then(res => {
+        let list = [...res.data];
         this.setState({
-          response: res.data,
-          lineData: res.data,
-          columnData: res.data.map(a => a + 20000)
+          listData: list,
+          lineData: list,
+          columnData: list.map(a => a + 20000)
         });
       });
   };
 
   chageState = val => {
-    const data = this.state.response;
+    const data = this.state.listData;
     const arr = data.map(a => {
       return a + val;
     });
@@ -42,6 +43,8 @@ class Chart extends React.Component {
     });
   };
   render() {
+    const lineData = this.state.lineData;
+    const columnData = this.state.columnData;
     return (
       <div>
         <h1 className="main">
@@ -50,16 +53,13 @@ class Chart extends React.Component {
           </Link>
         </h1>
         <h3 className="main">High Chart Example</h3>
-        {this.state.response.length > 0 ? (
-          <ListChart data={this.state.response} change={this.chageState} />
+        {lineData.length > 0 ? (
+          <ListChart data={lineData} change={this.chageState} />
         ) : (
           <div className="container text-center loader">Loading .....</div>
         )}
-        {this.state.response.length > 0 ? (
-          <ColumnChart
-            lineData={this.state.lineData}
-            columnData={this.state.columnData}
-          />
+        {lineData.length > 0 ? (
+          <ColumnChart lineData={lineData} columnData={columnData} />
         ) : (
           <div className="container text-center loader">Loading .....</div>
         )}

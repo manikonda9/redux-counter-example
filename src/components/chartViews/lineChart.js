@@ -39,14 +39,11 @@ class LineChart extends React.Component {
         series: [
           {
             name: "line chart",
-            data: this.props.data
+            data: props.data
           }
         ],
         plotOptions: {
           series: {
-            label: {
-              connectorAllowed: false
-            },
             //pointStart: 2010,
             point: {
               events: {

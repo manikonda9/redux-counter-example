@@ -72,10 +72,12 @@ class ColumnChart extends React.Component {
         ]
       }
     }));*/
-    let chart = this.state.chart;
+    const columnChart = this.state.chart;
     //chart.update(this.state.columnOptions);
-    chart.series[0].update({ data: this.props.columnData });
-    chart.series[1].update({ data: this.props.lineData });
+    const lineData = [...this.props.lineData];
+    const columnData = [...this.props.columnData];
+    columnChart.series[0].update({ data: columnData });
+    columnChart.series[1].update({ data: lineData });
   };
 
   render() {
