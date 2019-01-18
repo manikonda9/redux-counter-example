@@ -6,13 +6,15 @@ import Table from "./containers/table/table";
 import Chart from "./containers/chart/chart";
 import ToDo from "./components/todoList/ToDoList";
 import Form from "./containers/forms/userForm";
+import Login from "./components/loginPage/login";
 import Home from "./Home";
 
 class RouterComp extends React.Component {
   render() {
     return (
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" component={Login} />
+        <Route path="/home" component={Home} />
         <Route path="/counter" component={Counter} />
         <Route path="/list" component={List} />
         <Route path="/table" component={Table} />
