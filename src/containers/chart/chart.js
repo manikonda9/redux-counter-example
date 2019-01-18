@@ -17,16 +17,18 @@ class Chart extends React.Component {
   }
 
   componentWillMount = () => {
-    axios
-      .get("https://my-practice-project-f6467.firebaseio.com/sales.json")
-      .then(res => {
-        let list = [...res.data];
-        this.setState({
-          listData: list,
-          lineData: list,
-          columnData: list.map(a => a + 20000)
-        });
+    const config = {
+      method: "get",
+      url: "https://my-practice-project-f6467.firebaseio.com/sales.json"
+    };
+    axios(config).then(res => {
+      let list = [...res.data];
+      this.setState({
+        listData: list,
+        lineData: list,
+        columnData: list.map(a => a + 20000)
       });
+    });
   };
 
   chageState = val => {
