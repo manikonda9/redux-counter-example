@@ -1,13 +1,9 @@
 import firebase from "firebase";
+import { devConfig } from "./config";
 
-const config = {
-  apiKey: "AIzaSyCkexqRYya5sH9uCgjzC4erm43r_cvXHz0",
-  authDomain: "my-practice-project-f6467.firebaseio.com",
-  databaseURL: "https://my-practice-project-f6467.firebaseio.com/"
-};
+firebase.initializeApp(devConfig);
 
-firebase.initializeApp(config);
-
+export const auth = firebase.auth();
 const databaseRef = firebase.database().ref();
 export const todosRef = databaseRef.child("todos");
 
