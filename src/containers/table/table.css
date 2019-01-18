@@ -26,10 +26,17 @@
   }
 }
 
-.loader{
+.loader {
   position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: green;
+}
+
+.primary,
+.primary:hover {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }

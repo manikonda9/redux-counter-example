@@ -14,12 +14,13 @@ class UserForm extends React.Component {
     const user = {
       Name: this.name.value,
       EmailId: this.email.value,
-      Age: this.age.value,
-      Id: this.id.value,
+      Age: Number.parseInt(this.age.value),
+      Id: Number.parseInt(this.id.value),
       Place: this.place.value
     };
+    dataRef.push().set(user);
+    this.props.history.push("/table");
 
-    dataRef.push(user);
     /*axios
       .post("https://my-practice-project-f6467.firebaseio.com/data", { user })
       .then(res => console.log(res))
