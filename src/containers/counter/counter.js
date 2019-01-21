@@ -4,6 +4,7 @@ import "./counter.css";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "../../components/header/header";
 import { INC, DEC, ADD, SUB, func } from "../../actions/index";
 import View from "../../components/counterView/counterView";
 import Output from "../../components/counterOutput/counterOutput";
@@ -18,11 +19,12 @@ class Counter extends React.Component {
   render() {
     return (
       <div>
-        <h1 className="main">
+        {/*<h1 className="main">
           <Link className="link" to="/">
             React Home Page
           </Link>
-        </h1>
+        </h1>*/}
+        <Header />
         <h3 className="main">Redux Counter Example</h3>
         <Output counter={this.props.ctr} />
         <div className="container">

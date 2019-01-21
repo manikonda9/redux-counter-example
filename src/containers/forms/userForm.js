@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import Header from "../../components/header/header";
 import { dataRef } from "../../config/firebase";
 import "./form.css";
 
@@ -30,11 +31,12 @@ class UserForm extends React.Component {
   render() {
     return (
       <div className="container">
-        <h1 className="main">
+        {/*<h1 className="main">
           <Link className="link" to="/">
             React Home Page
           </Link>
-        </h1>
+        </h1>*/}
+        <Header />
         <h3 className="main">Upload User Details Example</h3>
         <div className="container">
           <form className="form-horizontal" onSubmit={this.submit}>

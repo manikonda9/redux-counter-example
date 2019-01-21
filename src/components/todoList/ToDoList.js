@@ -6,6 +6,7 @@ import * as actions from "../../actions/todoAction";
 import ToDoListItem from "./ToDoListItem";
 import { Link } from "react-router-dom";
 import { todosRef } from "../../config/firebase";
+import Header from "../../components/header/header";
 
 class ToDoList extends React.Component {
   state = {
@@ -82,11 +83,12 @@ class ToDoList extends React.Component {
     const { addFormVisible } = this.state;
     return (
       <div className="to-do-list-container">
-        <h1 className="main">
+        {/*<h1 className="main">
           <Link className="link" to="/">
             React Home Page
           </Link>
-        </h1>
+        </h1>*/}
+        <Header />
         <div className="row">
           {this.renderAddForm()}
           {this.renderToDos()}

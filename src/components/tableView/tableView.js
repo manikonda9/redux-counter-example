@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Header from "../header/header";
 
 class tableView extends React.Component {
   constructor(props) {
@@ -39,11 +40,12 @@ class tableView extends React.Component {
     const items = this.state.items;
     return (
       <div className="container">
-        <h1 className="main">
+        {/*<h1 className="main">
           <Link className="link" to="/">
             React Home Page
           </Link>
-        </h1>
+        </h1>*/}
+        <Header />
         <h3 className="main">Table Search Example</h3>
         <input
           type="text"

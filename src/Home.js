@@ -36,21 +36,10 @@ class Home extends React.Component {
     };
   }
 
-  signOut = e => {
-    auth
-      .signOut()
-      .then(() => {
-        this.props.history.push("/");
-      })
-      .catch(err => {
-        this.props.history.push("/");
-      });
-    e.preventDefault();
-  };
   render() {
     return (
       <div>
-        <Header click={this.signOut} />
+        <Header />
         {this.state.data.map((data, index) => (
           <div className="dashboard" key={index}>
             <Link className="link" to={data.path}>

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { addItem, deleteItem } from "../../actions/listAction";
 import ListView from "../../components/listView/listView";
 import AddList from "../../components/addList/addList";
+import Header from "../../components/header/header";
 
 class List extends React.Component {
   constructor(props) {
@@ -16,11 +17,12 @@ class List extends React.Component {
   render() {
     return (
       <div>
-        <h1 className="main">
+        {/*<h1 className="main">
           <Link className="link" to="/">
             React Home Page
           </Link>
-        </h1>
+        </h1>*/}
+        <Header />
         <h3 className="list">Redux List Example</h3>
         <div className="row container">
           <AddList add={this.props.add} />
