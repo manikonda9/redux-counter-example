@@ -18,7 +18,8 @@
   border-radius: 5px;
 }
 
-.dashboard .link, .dashboard .link:hover{
+.dashboard .link,
+.dashboard .link:hover {
   color: white !important;
   font-weight: bold;
 }

@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Header from "./components/header/header";
+import { auth } from "./config/firebase";
 
 class Home extends React.Component {
   constructor(props) {
@@ -33,14 +35,22 @@ class Home extends React.Component {
       ]
     };
   }
+
+  signOut = e => {
+    auth
+      .signOut()
+      .then(() => {
+        this.props.history.push("/");
+      })
+      .catch(err => {
+        this.props.history.push("/");
+      });
+    e.preventDefault();
+  };
   render() {
     return (
       <div>
-        <h1 className="main">
-          <Link className="link" to="/">
-            React Home Page
-          </Link>
-        </h1>
+        <Header click={this.signOut} />
         {this.state.data.map((data, index) => (
           <div className="dashboard" key={index}>
             <Link className="link" to={data.path}>

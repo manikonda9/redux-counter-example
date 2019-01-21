@@ -37,14 +37,14 @@ class Login extends React.Component {
       .then(() => {
         auth.onAuthStateChanged(user => {
           if (user) {
-            if (user && user.emailVerified) {
+            if (user) {
               this.props.history.push("/home");
             } else {
               let error = { message: "Please verify Account details" };
               this.setState({ errors: this.state.errors.concat(error) });
             }
           } else {
-            this.props.history.push("/login");
+            this.props.history.push("/");
           }
         });
       })
