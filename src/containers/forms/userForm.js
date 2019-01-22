@@ -9,17 +9,38 @@ import PropTypes from "prop-types";
 class UserForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      Name: "",
+      EmailId: "",
+      Age: "",
+      Id: "",
+      Place: ""
+    };
   }
 
+  handleChange = event => {
+    event.preventDefault();
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+  };
+
   submit = e => {
+    e.preventDefault();
     const user = {
+      Name: this.state.Name,
+      EmailId: this.state.EmailId,
+      Age: this.state.Age,
+      Id: this.state.Id,
+      Place: this.state.Place
+    };
+    /*const user = {
       Name: this.name.value,
       EmailId: this.email.value,
       Age: Number.parseInt(this.age.value),
       Id: Number.parseInt(this.id.value),
       Place: this.place.value
-    };
+    };*/
     dataRef.push().set(user);
     this.props.history.push("/table");
 
@@ -48,7 +69,10 @@ class UserForm extends React.Component {
               <div className="">
                 <input
                   type="text"
-                  ref={input => (this.name = input)}
+                  name="Name"
+                  value={this.state.Name}
+                  onChange={this.handleChange}
+                  // ref={input => (this.name = input)}
                   className="form-control"
                   id="username"
                   placeholder="Enter Name"
@@ -62,7 +86,10 @@ class UserForm extends React.Component {
               <div className="">
                 <input
                   type="email"
-                  ref={input => (this.email = input)}
+                  name="EmailId"
+                  value={this.state.EmailID}
+                  onChange={this.handleChange}
+                  // ref={input => (this.email = input)}
                   className="form-control"
                   id="email"
                   placeholder="Enter Email Id"
@@ -76,7 +103,10 @@ class UserForm extends React.Component {
               <div className="">
                 <input
                   type="number"
-                  ref={input => (this.id = input)}
+                  name="Id"
+                  value={this.state.Id}
+                  onChange={this.handleChange}
+                  // ref={input => (this.id = input)}
                   className="form-control"
                   id="id"
                   placeholder="Enter Id"
@@ -90,7 +120,10 @@ class UserForm extends React.Component {
               <div className="">
                 <input
                   type="number"
-                  ref={input => (this.age = input)}
+                  name="Age"
+                  value={this.state.Age}
+                  onChange={this.handleChange}
+                  //ref={input => (this.age = input)}
                   className="form-control"
                   id="age"
                   placeholder="Enter Age"
@@ -104,7 +137,10 @@ class UserForm extends React.Component {
               <div className="">
                 <input
                   type="text"
-                  ref={input => (this.place = input)}
+                  name="Place"
+                  value={this.state.Place}
+                  onChange={this.handleChange}
+                  // ref={input => (this.place = input)}
                   className="form-control"
                   id="place"
                   placeholder="Enter Place"
@@ -125,11 +161,11 @@ class UserForm extends React.Component {
 
 UserForm.propTypes = {
   user: PropTypes.objectOf({
-    Name: PropTypes.string,
-    EmailId: PropTypes.string,
-    Age: PropTypes.number,
-    Id: PropTypes.number,
-    Place: PropTypes.string
+    Name: PropTypes.string.isRequired,
+    EmailId: PropTypes.string.isRequired,
+    Age: PropTypes.number.isRequired,
+    Id: PropTypes.number.isRequired,
+    Place: PropTypes.string.isRequired
   }),
   submit: PropTypes.func
 };
