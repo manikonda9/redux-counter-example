@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Header from "./components/header/header";
 import { auth } from "./config/firebase";
+import PropTypes from "prop-types";
 
 class Home extends React.Component {
   constructor(props) {
@@ -51,5 +52,14 @@ class Home extends React.Component {
     );
   }
 }
+
+Home.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.objectOf({
+      name: PropTypes.string,
+      path: PropTypes.string
+    })
+  )
+};
 
 export default Home;
