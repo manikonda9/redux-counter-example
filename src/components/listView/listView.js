@@ -1,6 +1,7 @@
 import React from "react";
 import "./listView.css";
 import "font-awesome/css/font-awesome.min.css";
+import PropTypes from "prop-types";
 
 const listView = props => {
   return (
@@ -21,6 +22,10 @@ const listView = props => {
       </ol>
     </div>
   );
+};
+
+listView.propTypes = {
+  list: PropTypes.oneOfType([PropTypes.string, PropTypes.func])
 };
 
 export default listView;

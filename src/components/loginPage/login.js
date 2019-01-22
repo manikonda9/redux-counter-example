@@ -1,5 +1,6 @@
 import React from "react";
 import { auth } from "../../config/firebase";
+import PropTypes from "prop-types";
 
 class Login extends React.Component {
   constructor(props) {
@@ -103,5 +104,10 @@ class Login extends React.Component {
     );
   }
 }
+
+Login.propTypes = {
+  email: PropTypes.string,
+  password: PropTypes.string
+};
 
 export default Login;

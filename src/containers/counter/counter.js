@@ -4,6 +4,7 @@ import "./counter.css";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import PropTypes from "prop-types";
 import Header from "../../components/header/header";
 import { INC, DEC, ADD, SUB, func } from "../../actions/index";
 import View from "../../components/counterView/counterView";
@@ -44,6 +45,15 @@ const mapStateToProps = state => {
   return {
     ctr: state.counterReducer.counter
   };
+};
+
+Counter.propTypes = {
+  counter: PropTypes.number,
+  ctr: PropTypes.number,
+  incFunc: PropTypes.func,
+  decFunc: PropTypes.func,
+  addFunc: PropTypes.func,
+  subFunc: PropTypes.func
 };
 
 const mapDispatchToProps = dispatch => {

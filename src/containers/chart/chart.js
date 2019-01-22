@@ -5,6 +5,7 @@ import axios from "axios";
 import ListChart from "../../components/chartViews/lineChart";
 import ColumnChart from "../../components/chartViews/columnChart";
 import "./chart.css";
+import PropTypes from "prop-types";
 import Header from "../../components/header/header";
 
 class Chart extends React.Component {
@@ -72,5 +73,11 @@ class Chart extends React.Component {
     );
   }
 }
+
+Chart.propTypes = {
+  listData: PropTypes.arrayOf(PropTypes.number),
+  lineData: PropTypes.arrayOf(PropTypes.number),
+  columnData: PropTypes.arrayOf(PropTypes.number)
+};
 
 export default Chart;

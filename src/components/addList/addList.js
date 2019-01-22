@@ -1,5 +1,6 @@
 import React from "react";
 import "./addList.css";
+import PropTypes from "prop-types";
 
 const addList = props => {
   let input;
@@ -22,6 +23,11 @@ const addList = props => {
       </button>
     </div>
   );
+};
+
+addList.propTypes = {
+  add: PropTypes.func,
+  input: PropTypes.string.isRequired
 };
 
 export default addList;

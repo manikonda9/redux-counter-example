@@ -4,6 +4,7 @@ import axios from "axios";
 import Header from "../../components/header/header";
 import { dataRef } from "../../config/firebase";
 import "./form.css";
+import PropTypes from "prop-types";
 
 class UserForm extends React.Component {
   constructor(props) {
@@ -121,5 +122,16 @@ class UserForm extends React.Component {
     );
   }
 }
+
+UserForm.propTypes = {
+  user: PropTypes.objectOf({
+    Name: PropTypes.string,
+    EmailId: PropTypes.string,
+    Age: PropTypes.number,
+    Id: PropTypes.number,
+    Place: PropTypes.string
+  }),
+  submit: PropTypes.func
+};
 
 export default UserForm;

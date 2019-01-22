@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Header from "../header/header";
+import PropTypes from "prop-types";
 
 class tableView extends React.Component {
   constructor(props) {
@@ -81,5 +82,23 @@ class tableView extends React.Component {
     );
   }
 }
+
+tableView.propTypes = {
+  data: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.number,
+    PropTypes.string,
+    PropTypes.string
+  ]),
+  items: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.number,
+    PropTypes.string,
+    PropTypes.string
+  ]),
+  searchInput: PropTypes.string
+};
 
 export default tableView;

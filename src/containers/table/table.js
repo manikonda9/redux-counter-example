@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import _ from "lodash";
+import PropTypes from "prop-types";
 import { dataRef } from "../../config/firebase";
 import { getData } from "../../actions/tableAction";
 import TableView from "../../components/tableView/tableView";
@@ -68,6 +69,12 @@ const mapDispatchToProps = dispatch => {
   return {
     get: () => dispatch(getData())
   };
+};
+
+Table.propTypes = {
+  list: PropTypes.object,
+  get: PropTypes.func,
+  items: PropTypes.array
 };
 
 export default connect(

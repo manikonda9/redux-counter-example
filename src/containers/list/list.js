@@ -6,6 +6,7 @@ import { addItem, deleteItem } from "../../actions/listAction";
 import ListView from "../../components/listView/listView";
 import AddList from "../../components/addList/addList";
 import Header from "../../components/header/header";
+import PropTypes from "prop-types";
 
 class List extends React.Component {
   constructor(props) {
@@ -47,6 +48,15 @@ const mapDispatchToProps = dispatch => {
     add: text => dispatch(addItem(text)),
     delete: index => dispatch(deleteItem(index))
   };
+};
+
+List.propTypes = {
+  list: PropTypes.arrayOf({
+    title: PropTypes.string
+  }),
+  listItems: PropTypes.object,
+  add: PropTypes.func,
+  delete: PropTypes.func
 };
 
 export default connect(

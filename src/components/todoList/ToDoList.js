@@ -6,6 +6,7 @@ import * as actions from "../../actions/todoAction";
 import ToDoListItem from "./ToDoListItem";
 import { Link } from "react-router-dom";
 import { todosRef } from "../../config/firebase";
+import PropTypes from "prop-types";
 import Header from "../../components/header/header";
 
 class ToDoList extends React.Component {
@@ -109,6 +110,12 @@ class ToDoList extends React.Component {
     );
   }
 }
+
+ToDoList.propTypes = {
+  addFormVisible: PropTypes.bolean,
+  addFormValue: PropTypes.string,
+  list: PropTypes.arrayOf(PropTypes.object)
+};
 
 const mapStateToProps = state => {
   return {

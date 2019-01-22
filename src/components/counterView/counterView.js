@@ -1,5 +1,6 @@
 import React from "react";
 import "./counterView.css";
+import PropTypes from "prop-types";
 
 const view = props => {
   return (
@@ -9,6 +10,11 @@ const view = props => {
       </div>
     </div>
   );
+};
+
+view.propTypes = {
+  click: PropTypes.func,
+  label: PropTypes.string.isRequired
 };
 
 export default view;
